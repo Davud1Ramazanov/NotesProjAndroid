@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -34,6 +36,8 @@ public class Login extends AppCompatActivity {
         confirmBtnLogin = (Button) findViewById(R.id.confirmBtnLogin);
 
         confirmBtnLogin.setOnClickListener((view) -> {
+            Animation animation = AnimationUtils.loadAnimation(this, R.anim.auth_win_anim);
+            confirmBtnLogin.setAnimation(animation);
             String name = nameLogin.getText().toString();
             String password = passwordLogin.getText().toString();
             String passwordCheck = confirmPasswordLogin.getText().toString();

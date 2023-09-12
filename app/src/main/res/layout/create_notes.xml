@@ -63,23 +63,6 @@
             android:textStyle="bold"
             android:translationY="130dp" />
 
-        <EditText
-            android:id="@+id/dateInput"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:background="#30ffffff"
-            android:drawableLeft="@drawable/baseline_date_range_24"
-            android:drawablePadding="20dp"
-            android:ems="10"
-            android:hint="Date"
-            android:inputType="datetime"
-            android:padding="15dp"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
-            android:textStyle="bold"
-            android:translationY="130dp" />
-
         <Button
             android:id="@+id/addBtn"
             android:layout_width="match_parent"

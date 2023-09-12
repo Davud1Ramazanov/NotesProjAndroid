@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -35,6 +37,8 @@ public class Registration extends AppCompatActivity {
         confirmBtn = (Button) findViewById(R.id.confirmBtn);
 
         confirmBtn.setOnClickListener((view) -> {
+            Animation animation = AnimationUtils.loadAnimation(this, R.anim.reg_win_anim);
+            confirmBtn.setAnimation(animation);
             String name = nameInput.getText().toString();
             String password = passwordInput.getText().toString();
             String passwordCheck = confirmPasswordInput.getText().toString();
